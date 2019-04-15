@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LosAnalyzerDialogBase</class>
+ <widget class="QDialog" name="LosAnalyzerDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>412</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LOS Analyzer </string>
+  </property>
+  <widget class="QDialogButtonBox" name="OkCancelBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>580</y>
+     <width>361</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Header">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>20</y>
+     <width>391</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kind Sir, Please Provide the Following Inputs and Parameters:</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>50</y>
+     <width>409</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="VectorLabel">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>53</y>
+      <width>158</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>GCS (Single Point Vector)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="OutputText">
+    <property name="geometry">
+     <rect>
+      <x>192</x>
+      <y>394</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="OutputLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>396</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select Output File  </string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="VectorBox">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>46</y>
+      <width>211</width>
+      <height>32</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>87</y>
+      <width>190</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Observer Height above Ground</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="OutputButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>390</y>
+      <width>40</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="RadiusBox">
+    <property name="geometry">
+     <rect>
+      <x>319</x>
+      <y>115</y>
+      <width>40</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>16777215</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RasterLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>18</y>
+      <width>132</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Terrain (DEM Raster) </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ClearanceBox">
+    <property name="geometry">
+     <rect>
+      <x>319</x>
+      <y>146</y>
+      <width>40</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>16777215</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeUnit_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>369</x>
+      <y>118</y>
+      <width>26</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>  km</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="HeightBox">
+    <property name="geometry">
+     <rect>
+      <x>319</x>
+      <y>84</y>
+      <width>40</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>16777215</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>118</y>
+      <width>108</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Radius of Interest</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeUnit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>369</x>
+      <y>87</y>
+      <width>19</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>  m</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeUnit_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>369</x>
+      <y>149</y>
+      <width>19</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>  m</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>149</y>
+      <width>170</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Minimum Ground Clearance</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="RasterBox">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>211</width>
+      <height>32</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CurvatureCheck">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Account for Earth Curvature</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="kBox">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>252</y>
+      <width>40</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>16777215</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_4">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>255</y>
+      <width>100</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>~0.15 for visual</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_5">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>275</y>
+      <width>130</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>~0.20 for radio</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="FresnelCheck">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fresnel Zone Clearance:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_6">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>333</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ensure </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_7">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>333</y>
+      <width>221</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Percent Clearance of Zone Number </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pBox">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>330</y>
+      <width>30</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>16777215</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nBox">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>330</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>16777215</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="OutputLabel_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>430</y>
+      <width>361</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>There will be three files in this directory:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="OutputLabel_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>391</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>/filename-0.txt: Contains the chose parameters</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="OutputLabel_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>480</y>
+      <width>381</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>/filename-1.tif: Minimum flight altitude w.r.t. GCS for LoS</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="OutputLabel_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
+      <width>361</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>/filename-2.tif: Terrain elevations above GCS</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fBox">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>353</y>
+      <width>60</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>60</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_8">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>356</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Signal Frequency:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_9">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>356</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>GHz</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_12">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>230</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>with Earth Curvature)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AltitudeLabel_13">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>255</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Refraction Coefficient k =</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QCheckBox" name="RefractionCheck">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>260</y>
+     <width>360</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Account for Refraction (available only in conjunction</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>OkCancelBox</sender>
+   <signal>accepted()</signal>
+   <receiver>LosAnalyzerDialogBase</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OkCancelBox</sender>
+   <signal>rejected()</signal>
+   <receiver>LosAnalyzerDialogBase</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
